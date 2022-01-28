@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-  max-width: 1220px;
+  max-width: 1240px;
   padding: 0 20px;
   margin: 0 auto;
 }
@@ -33,5 +33,6 @@ a {
 @import "blocks/promo";
 @import "blocks/header";
 @import "blocks/reasons";
+@import "blocks/info";
 
 @import "libs/fonts";
