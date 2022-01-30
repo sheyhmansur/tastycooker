@@ -1,4 +1,6 @@
 window.addEventListener("DOMContentLoaded", () => {
+  /* ----------- Инциалазиця слайдера на мобильных устройствах ---------- */
+
   const slider = document.querySelector(".info");
   const slider1 = document.querySelector(".reasons-slider");
   const slider2 = document.querySelector(".reviews-slider");
@@ -7,7 +9,6 @@ window.addEventListener("DOMContentLoaded", () => {
   let mySwiper2;
   let mySwiper3;
 
-  // Инициализация слайдера на планшетных, мобильных устройствах
   function mobileSlider() {
     if (window.innerWidth <= 600 && slider.dataset.mobile == "false") {
       mySwiper = new Swiper(slider, {
@@ -87,5 +88,38 @@ window.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("resize", () => {
     mobileSlider2();
+  });
+
+  /* ----------- Плавная прокрута до формы ---------- */
+
+  const buttons = document.querySelectorAll("[data-scroll='btn']");
+  const form = document.querySelector("#form");
+
+  const scrollTo = (element) => {
+    window.scroll({
+      left: 0,
+      top: element.offsetTop,
+      behavior: "smooth",
+    });
+  };
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      scrollTo(form);
+    });
+  });
+
+  /* ----------- Валидация email ---------- */
+
+  const input = document.querySelector(".footer__form-input");
+  const regex =
+    /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+  input.addEventListener("change", (e) => {
+    if (!regex.test(String(e.target.value).toLocaleLowerCase())) {
+      console.log("неправильно");
+      alert("Введите корректный еmail");
+    }
   });
 });
