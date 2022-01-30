@@ -1,6 +1,7 @@
 .promo {
   padding: 45px 0 105px 0;
   background: url("../img/promo_bg.png") center 0px / cover no-repeat;
+  min-height: 600px;
 
   &__title {
     max-width: 615px;
@@ -33,13 +34,30 @@
     background-image: linear-gradient(63deg, #12bc82 -4%, #bfdf2c 104%);
     border-radius: 10px;
     box-shadow: 0px -4px 12px 11px rgba(195, 46, 46, 0.2);
-
     @media (min-width: 1200px) {
       position: relative;
       overflow: hidden;
-      transition: 1s;
+      transition: 0.8s !important;
       @include btn-hover;
     }
-    // box-shadow: 0px -6px 32px 0px rgba(187 15 15 / 45%);
+  }
+}
+
+@media (max-width: 420px) {
+  .promo {
+    background: url("../img/promo_mob.png") center center / cover no-repeat;
+    padding: 22px 0 50px 0;
+    &__title {
+      margin-top: 30px;
+      font-size: 30px;
+      text-align: center;
+    }
+    &__subtitle {
+      font-size: 20px;
+    }
+    &__btn {
+      margin-top: 255px;
+      box-shadow: 0 18px 25px 2px rgba(195, 46, 46, 62%);
+    }
   }
 }

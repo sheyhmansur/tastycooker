@@ -18,12 +18,15 @@
     min-height: 341px;
     &-1 {
       background: url("../img/reasons/mobile.png") center no-repeat;
+      background-size: contain;
     }
     &-2 {
       background: url("../img/reasons/dish.png") center no-repeat;
+      background-size: contain;
     }
     &-3 {
       background: url("../img/reasons/child.png") center no-repeat;
+      background-size: contain;
     }
   }
   &__descr {
@@ -53,5 +56,14 @@
   }
   .swiper-wrapper {
     flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 420px) {
+  .reasons {
+    &__title {
+      font-size: 30px;
+      text-align: center;
+    }
   }
 }
