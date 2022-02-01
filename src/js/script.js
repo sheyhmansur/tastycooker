@@ -1,6 +1,6 @@
 /* ----------- Инциалазиця слайдера на мобильных устройствах ---------- */
 
-const slider = document.querySelector(".info");
+const slider = document.querySelector(".info-slider");
 const slider1 = document.querySelector(".reasons-slider");
 const slider2 = document.querySelector(".reviews-slider");
 
@@ -14,6 +14,9 @@ function mobileSlider() {
       slidesPerview: 1,
       spaceBetween: 10,
       loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+      },
       slideClass: "info__item",
     });
 
@@ -41,6 +44,9 @@ function mobileSlider1() {
       slidesPerview: 1,
       spaceBetween: 10,
       loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+      },
       slideClass: "reasons__item",
     });
 
@@ -68,6 +74,9 @@ function mobileSlider2() {
       slidesPerview: 1,
       spaceBetween: 10,
       loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+      },
       slideClass: "reviews__item",
     });
 

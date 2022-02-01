@@ -47,6 +47,10 @@
   flex-wrap: wrap;
 }
 
+.reasons-slider {
+  padding-bottom: 40px;
+}
+
 @media (max-width: 600px) {
   .reasons {
     &__item {

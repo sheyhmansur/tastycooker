@@ -1,5 +1,8 @@
 .reviews {
   padding: 56px 0 58px 0;
+  .reviews-slider {
+    padding-bottom: 40px;
+  }
   &__title {
     @include Title;
   }
@@ -22,7 +25,7 @@
     font-weight: 600;
     color: #242424;
   }
-  &__figure {
+  &__figure-one {
     width: 0;
     height: 0;
     display: block;
@@ -30,15 +33,18 @@
     border-left: 20px solid #eeeeee;
     border-right: 20px solid transparent;
     border-bottom: 20px solid transparent;
-    position: relative;
-    z-index: 1;
-    // margin-top: -10px;
-    // clip-path: polygon(8% 0, 0 11%, 0 0);
-    // background-color: red;
-    // width: 10px;
-    // height: 10px;
-    // display: block;
   }
+  &__figure-two {
+    width: 0;
+    height: 0;
+    display: block;
+    margin-left: 41px;
+    margin-top: -21px;
+    border-left: 18px solid #fff;
+    border-right: 18px solid #af424200;
+    border-bottom: 19px solid #ad404000;
+  }
+
   &__item-info {
     margin-top: 40px;
     display: flex;
